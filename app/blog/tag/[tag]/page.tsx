@@ -7,9 +7,9 @@ import { Clock } from "lucide-react";
 import { TagBadge } from "@/components/TagBadge";
 
 interface TagPageProps {
-  params: {
+  params: Promise<{
     tag: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {

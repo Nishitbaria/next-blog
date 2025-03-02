@@ -1,4 +1,4 @@
-const { withContentlayer } = require('next-contentlayer');
+import { withContentlayer } from 'next-contentlayer';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -10,4 +10,4 @@ const nextConfig = {
   serverExternalPackages: ['shiki']
 };
 
-module.exports = withContentlayer(nextConfig);
+export default withContentlayer(nextConfig);

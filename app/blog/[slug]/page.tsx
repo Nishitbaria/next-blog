@@ -12,9 +12,9 @@ import { CategoryBadge } from '@/components/CategoryBadge';
 import { TagBadge } from '@/components/TagBadge';
 
 interface PostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {

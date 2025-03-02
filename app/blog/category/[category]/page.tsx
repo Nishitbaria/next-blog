@@ -7,9 +7,9 @@ import { Clock } from "lucide-react";
 import { CategoryBadge } from "@/components/CategoryBadge";
 
 interface CategoryPageProps {
-  params: {
+  params: Promise<{
     category: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
