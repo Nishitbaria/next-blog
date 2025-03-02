@@ -23,19 +23,19 @@ export default function Home() {
       </div>
       
       <div className="mt-16 md:mt-24 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <div className="rounded-lg border bg-card p-6 shadow-sm">
+        <div className="rounded-lg border bg-card p-6 shadow-xs">
           <h3 className="text-xl font-bold">Web Development</h3>
           <p className="mt-2 text-muted-foreground">
             Articles about frontend and backend development, frameworks, and best practices.
           </p>
         </div>
-        <div className="rounded-lg border bg-card p-6 shadow-sm">
+        <div className="rounded-lg border bg-card p-6 shadow-xs">
           <h3 className="text-xl font-bold">JavaScript & TypeScript</h3>
           <p className="mt-2 text-muted-foreground">
             Deep dives into JavaScript concepts, TypeScript tips, and code examples.
           </p>
         </div>
-        <div className="rounded-lg border bg-card p-6 shadow-sm">
+        <div className="rounded-lg border bg-card p-6 shadow-xs">
           <h3 className="text-xl font-bold">UI/UX Design</h3>
           <p className="mt-2 text-muted-foreground">
             Thoughts on design principles, accessibility, and creating better user experiences.

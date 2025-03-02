@@ -4,8 +4,15 @@ description: Learn how to make your web applications more accessible and inclusi
 date: 2025-04-20
 author: Alex Johnson
 image: https://images.unsplash.com/photo-1617791160505-6f00504e3519?q=80&w=2000
-categories: ["Accessibility", "Web Development"]
-tags: ["accessibility", "html", "aria", "keyboard navigation", "web standards"]
+categories:
+  - Accessibility
+  - Web Development
+tags:
+  - accessibility
+  - html
+  - aria
+  - keyboard navigation
+  - web standards
 ---
 
 # Building Accessible Web Applications
@@ -39,8 +46,8 @@ Ensure all interactive elements are keyboard accessible:
 
 ```javascript
 // Add keyboard support to custom components
-element.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter' || e.key === ' ') {
+element.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
     // Activate the element
     element.click();
   }
@@ -52,11 +59,7 @@ element.addEventListener('keydown', (e) => {
 ARIA (Accessible Rich Internet Applications) attributes enhance accessibility:
 
 ```html
-<button 
-  aria-label="Close dialog"
-  aria-pressed="false"
-  class="icon-button"
->
+<button aria-label="Close dialog" aria-pressed="false" class="icon-button">
   <svg>...</svg>
 </button>
 ```
@@ -69,7 +72,7 @@ Proper focus management ensures users can navigate your application:
 // Set focus to the first field in a form
 function openDialog() {
   dialog.showModal();
-  const firstInput = dialog.querySelector('input');
+  const firstInput = dialog.querySelector("input");
   if (firstInput) {
     firstInput.focus();
   }

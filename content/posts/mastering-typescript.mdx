@@ -1,11 +1,19 @@
 ---
 title: Mastering TypeScript
-description: A comprehensive guide to TypeScript features and best practices for modern web development.
+description: Dive deep into TypeScript and learn how to leverage its powerful type system for better code quality.
 date: 2025-04-15
 author: Jane Smith
-image: https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2000
-categories: ["TypeScript", "JavaScript", "Programming"]
-tags: ["typescript", "javascript", "type-safety", "interfaces", "generics"]
+image: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2000
+categories:
+  - TypeScript
+  - JavaScript
+  - Programming
+tags:
+  - typescript
+  - javascript
+  - type-safety
+  - interfaces
+  - generics
 ---
 
 # Mastering TypeScript
@@ -84,15 +92,16 @@ TypeScript and React work great together, providing type checking for props, sta
 interface ButtonProps {
   text: string;
   onClick: () => void;
-  color?: 'primary' | 'secondary';
+  color?: "primary" | "secondary";
 }
 
-const Button: React.FC<ButtonProps> = ({ text, onClick, color = 'primary' }) => {
+const Button: React.FC<ButtonProps> = ({
+  text,
+  onClick,
+  color = "primary",
+}) => {
   return (
-    <button 
-      className={`btn btn-${color}`}
-      onClick={onClick}
-    >
+    <button className={`btn btn-${color}`} onClick={onClick}>
       {text}
     </button>
   );

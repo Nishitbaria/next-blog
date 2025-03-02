@@ -44,7 +44,7 @@ const CodeHighlighter = React.memo(({ language, children }: { language: string; 
           className={cn(
             "rounded-md p-2 transition-all",
             "bg-zinc-800 hover:bg-zinc-700 border border-zinc-600 shadow-md",
-            "focus:outline-none focus:ring-2 focus:ring-primary"
+            "focus:outline-hidden focus:ring-2 focus:ring-primary"
           )}
           aria-label="Copy code to clipboard"
         >
