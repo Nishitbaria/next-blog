@@ -1,0 +1,90 @@
+---
+title: Building Accessible Web Applications
+description: Learn how to make your web applications more accessible and inclusive for all users.
+date: 2025-04-20
+author: Alex Johnson
+image: https://images.unsplash.com/photo-1617791160505-6f00504e3519?q=80&w=2000
+categories: ["Accessibility", "Web Development"]
+tags: ["accessibility", "html", "aria", "keyboard navigation", "web standards"]
+---
+
+# Building Accessible Web Applications
+
+Web accessibility ensures that websites and web applications are usable by people with disabilities. It's not just a nice-to-have feature—it's a necessity for creating inclusive digital experiences.
+
+## Why Accessibility Matters
+
+- **Inclusivity**: Ensures everyone can use your application
+- **Legal Compliance**: Many countries have laws requiring web accessibility
+- **SEO Benefits**: Many accessibility practices improve SEO
+- **Better UX for Everyone**: Accessible design often improves usability for all users
+
+## Core Accessibility Principles
+
+### Semantic HTML
+
+Using the right HTML elements for their intended purpose:
+
+```html
+<!-- Bad -->
+<div class="button" onclick="submit()">Submit</div>
+
+<!-- Good -->
+<button type="submit">Submit</button>
+```
+
+### Keyboard Navigation
+
+Ensure all interactive elements are keyboard accessible:
+
+```javascript
+// Add keyboard support to custom components
+element.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    // Activate the element
+    element.click();
+  }
+});
+```
+
+### ARIA Attributes
+
+ARIA (Accessible Rich Internet Applications) attributes enhance accessibility:
+
+```html
+<button 
+  aria-label="Close dialog"
+  aria-pressed="false"
+  class="icon-button"
+>
+  <svg>...</svg>
+</button>
+```
+
+### Focus Management
+
+Proper focus management ensures users can navigate your application:
+
+```javascript
+// Set focus to the first field in a form
+function openDialog() {
+  dialog.showModal();
+  const firstInput = dialog.querySelector('input');
+  if (firstInput) {
+    firstInput.focus();
+  }
+}
+```
+
+## Testing for Accessibility
+
+Always test your applications for accessibility:
+
+1. **Automated Testing**: Tools like Lighthouse, axe, and WAVE
+2. **Keyboard Testing**: Navigate using only the keyboard
+3. **Screen Reader Testing**: Test with NVDA, JAWS, or VoiceOver
+4. **Manual Checklist**: Follow WCAG guidelines
+
+## Conclusion
+
+Building accessible applications is an ongoing process that should be integrated into your development workflow. By considering accessibility from the start, you can create experiences that work well for everyone.
