@@ -6,10 +6,11 @@ import { format } from 'date-fns';
 import { Separator } from '@/components/ui/separator';
 import { TableOfContents } from '@/components/table-of-contents';
 import { MDXRenderer } from '@/components/mdx-renderer';
-import { Clock, Share2, Bookmark } from 'lucide-react';
+import { Clock, Bookmark } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { CategoryBadge } from '@/components/CategoryBadge';
 import { TagBadge } from '@/components/TagBadge';
+import { ShareModal } from '@/components/ShareModal';
 
 interface PostPageProps {
   params: Promise<{
@@ -60,6 +61,10 @@ export default async function PostPage({ params }: PostPageProps) {
     notFound();
   }
 
+  // Get the current URL for sharing
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com';
+  const postUrl = `${baseUrl}/blog/${slug}`;
+
   // Find related posts (by category or tag)
   const relatedPosts = allPosts
     .filter(p => p.slug !== post.slug) // Exclude current post
@@ -109,14 +114,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
             {/* Social Sharing */}
             <div className="flex items-center gap-2">
-              <Button variant="outline" size="sm" className="gap-1">
-                <Share2 className="h-4 w-4" />
-                Share
-              </Button>
-              <Button variant="outline" size="sm" className="gap-1">
-                <Bookmark className="h-4 w-4" />
-                Save
-              </Button>
+              <ShareModal title={post.title} url={postUrl} />
             </div>
           </div>
 
