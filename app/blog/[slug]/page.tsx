@@ -62,7 +62,7 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   // Get the current URL for sharing
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com';
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://yourdomain.com';
   const postUrl = `${baseUrl}/blog/${slug}`;
 
   // Find related posts (by category or tag)

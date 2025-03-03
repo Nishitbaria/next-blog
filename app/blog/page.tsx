@@ -3,8 +3,6 @@ import { compareDesc } from "date-fns";
 import Link from "next/link";
 import Image from "next/image";
 import { Clock, Search, ArrowUpRight } from "lucide-react";
-import { CategoryBadge } from "@/components/CategoryBadge";
-import { Input } from "@/components/ui/input";
 
 export default function BlogPage() {
   const posts = allPosts.sort((a, b) =>
@@ -122,18 +120,12 @@ export default function BlogPage() {
             <div className="relative h-6 w-6">
               <div className="absolute left-3 h-6 w-px bg-backdrop"></div>
               <div className="absolute top-3 h-px w-6 bg-backdrop"></div>
-              <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2">
-                <PlusIcon className="text-connection" />
-              </div>
             </div>
           </div>
           <div className="-bottom-3 -right-3 -translate-x-px absolute z-10 hidden h-6 sm:block">
             <div className="relative h-6 w-6">
               <div className="absolute left-3 h-6 w-px bg-backdrop"></div>
               <div className="absolute top-3 h-px w-6 bg-backdrop"></div>
-              <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2">
-                <PlusIcon className="text-connection" />
-              </div>
             </div>
           </div>
         </div>
@@ -189,18 +181,12 @@ export default function BlogPage() {
             <div className="relative h-6 w-6">
               <div className="absolute left-3 h-6 w-px bg-backdrop"></div>
               <div className="absolute top-3 h-px w-6 bg-backdrop"></div>
-              <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2">
-                <PlusIcon className="text-connection" />
-              </div>
             </div>
           </div>
           <div className="-bottom-3 -right-3 -translate-x-px absolute z-10 hidden h-6 sm:block">
             <div className="relative h-6 w-6">
               <div className="absolute left-3 h-6 w-px bg-backdrop"></div>
               <div className="absolute top-3 h-px w-6 bg-backdrop"></div>
-              <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2">
-                <PlusIcon className="text-connection" />
-              </div>
             </div>
           </div>
         </div>
@@ -209,22 +195,3 @@ export default function BlogPage() {
   );
 }
 
-function PlusIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={20}
-      height={20}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={`lucide lucide-plus ${className}`}
-    >
-      <path d="M5 12h14" />
-      <path d="M12 5v14" />
-    </svg>
-  )
-}

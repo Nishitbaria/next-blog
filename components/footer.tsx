@@ -50,31 +50,31 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="mailto:example@email.com"
+                  href="mailto:nishitbaria@gmail.com"
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  example@email.com
+                  nishitbaria@gmail.com
                 </a>
               </li>
               <li>
-                <a
-                  href="https://twitter.com"
+                <Link
+                  href="https://twitter.com/nishitbaria1"
                   target="_blank"
                   rel="noreferrer"
                   className="text-muted-foreground hover:text-foreground"
                 >
                   Twitter
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://github.com"
+                <Link
+                  href="https://github.com/Nishitbaria"
                   target="_blank"
                   rel="noreferrer"
                   className="text-muted-foreground hover:text-foreground"
                 >
                   GitHub
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
