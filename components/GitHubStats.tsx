@@ -40,7 +40,7 @@ export default function GitHubStats({ owner, repo, defaultStats }: GitHubStatsPr
     }, [owner, repo, defaultStats]);
 
     return (
-        <div className="flex items-center gap-4 mt-6 text-sm text-muted-foreground">
+        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 mt-6 text-sm text-muted-foreground">
             <div className="flex items-center gap-1">
                 <Star className="h-4 w-4" />
                 <span>{stats.stars} stars</span>
