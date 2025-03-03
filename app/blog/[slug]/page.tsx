@@ -137,7 +137,7 @@ export default async function PostPage({ params }: PostPageProps) {
           <div className="prose prose-lg dark:prose-invert max-w-none 
             prose-headings:font-bold prose-headings:tracking-tight
             prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-h4:text-lg
-            prose-a:text-primary prose-a:no-underline prose-a:hover:underline
+            prose-a:text-primary prose-a:no-underline hover:prose-a:underline
             prose-p:leading-7 
             prose-pre:rounded-md prose-pre:bg-zinc-900
             prose-img:rounded-lg
@@ -194,7 +194,7 @@ export default async function PostPage({ params }: PostPageProps) {
             <TableOfContents />
 
             {/* Author Info */}
-            <div className="rounded-lg border bg-card p-4 shadow-xs">
+            <div className="rounded-lg border bg-card p-4 shadow-2xs">
               <h3 className="font-semibold mb-2">About the Author</h3>
               <p className="text-sm text-muted-foreground">{post.author} is a writer who specializes in {post.categories?.join(', ')}.</p>
             </div>
