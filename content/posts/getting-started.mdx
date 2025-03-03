@@ -1,0 +1,77 @@
+---
+title: Getting Started with Next.js 15 Blog Template
+description: Learn how to use this modern blog template built with Next.js 15, TypeScript, and MDX.
+date: 2024-03-03
+author: Your Name
+categories: [tutorial, nextjs]
+tags: [getting-started, mdx, nextjs15]
+image: /images/getting-started.jpg
+---
+
+# Welcome to Your New Blog!
+
+This is an example blog post that demonstrates the various features available in this template.
+
+## Markdown Features
+
+You can use all standard Markdown features:
+
+- **Bold text** and _italic text_
+- Lists and nested lists
+- [Links](https://nextjs.org)
+- And more!
+
+## MDX Components
+
+This template includes several built-in components you can use in your MDX files:
+
+```tsx
+<Alert>
+  This is an important message!
+</Alert>
+
+<CodeBlock language="typescript">
+const greeting = "Hello, World!";
+console.log(greeting);
+</CodeBlock>
+```
+
+## Code Highlighting
+
+```typescript
+// Example TypeScript code
+interface User {
+  id: string
+  name: string
+  email: string
+}
+
+const getUser = async (id: string): Promise<User> => {
+  const response = await fetch(`/api/users/${id}`)
+  return response.json()
+}
+```
+
+## Images
+
+You can include images using standard Markdown syntax or the Next.js Image component:
+
+![Example Image](/images/example.jpg)
+
+## Custom Components
+
+This template includes several custom components:
+
+- CategoryBadge
+- TagBadge
+- TableOfContents
+- And more!
+
+## Next Steps
+
+1. Edit this post or create a new one in the `content/posts` directory
+2. Customize the styling in `tailwind.config.ts`
+3. Add your own components in the `components` directory
+4. Deploy your blog to Vercel or your preferred hosting platform
+
+Happy blogging! 🚀
