@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Newspaper } from 'lucide-react'
+import ThemeSwitcher from './ThemeSwitcher'
 
 export default function Footer() {
   return (
@@ -48,28 +49,28 @@ export default function Footer() {
             <h3 className="mb-4 text-sm font-semibold">Contact</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a 
-                  href="mailto:example@email.com" 
+                <a
+                  href="mailto:example@email.com"
                   className="text-muted-foreground hover:text-foreground"
                 >
                   example@email.com
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://twitter.com" 
-                  target="_blank" 
-                  rel="noreferrer" 
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-muted-foreground hover:text-foreground"
                 >
                   Twitter
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://github.com" 
-                  target="_blank" 
-                  rel="noreferrer" 
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-muted-foreground hover:text-foreground"
                 >
                   GitHub
@@ -78,8 +79,9 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Personal Blog. All rights reserved.</p>
+        <div className="mt-8 border-t pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Personal Blog. All rights reserved.</p>
+          <ThemeSwitcher />
         </div>
       </div>
     </footer>

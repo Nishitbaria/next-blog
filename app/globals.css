@@ -152,6 +152,9 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --backdrop: 0 0% 98%;
+  --connection: 142 71% 45%;
+  --success: 142 71% 45%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -159,6 +162,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --backdrop: 240 10% 3.9%;
   }
 }
 
@@ -215,6 +219,7 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --backdrop: 240 10% 3.9%;
   }
 }
 
@@ -239,7 +244,7 @@ pre {
 
 pre > code {
   display: grid;
-  font-family: "Menlo", "Monaco", "Courier New", monospace;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
   font-size: 0.9rem;
   line-height: 1.5;
   counter-reset: line;
@@ -266,7 +271,7 @@ code:not(pre code) {
   background-color: rgba(200, 200, 255, 0.1);
   padding: 0.2rem 0.4rem;
   border-radius: 0.25rem;
-  font-family: "Menlo", "Monaco", "Courier New", monospace;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
   font-size: 0.9em;
 }
 
@@ -330,4 +335,27 @@ code:not(pre code) {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Blog page styles */
+.bg-dashed {
+  background-color: hsl(var(--background));
+  background-image: radial-gradient(hsl(var(--muted) / 0.5) 1px, hsl(var(--background)) 1px);
+  background-size: 20px 20px;
+}
+
+.prose {
+  max-width: 65ch;
+  color: hsl(var(--foreground));
+}
+
+.prose a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.prose p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
 }
